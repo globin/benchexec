@@ -398,7 +398,6 @@ $content-height: calc(100vh - 43px); // height of .menu sums up to 43px
 
         .table-header {
           .tr {
-            border-bottom: 1px solid #adadad;
             align-items: stretch;
 
             .th {
@@ -409,7 +408,7 @@ $content-height: calc(100vh - 43px); // height of .menu sums up to 43px
 
               &.select-column-header,
               &.outer {
-                transition: background-color 0.3s;
+                transition: background-color 0.15s;
                 align-items: center;
               }
 
@@ -425,8 +424,8 @@ $content-height: calc(100vh - 43px); // height of .menu sums up to 43px
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                transition: background-color 0.3s;
-                padding: 10px;
+                transition: background-color 0.15s;
+                padding: 5px;
                 width: 100%;
               }
             }
@@ -522,7 +521,7 @@ $content-height: calc(100vh - 43px); // height of .menu sums up to 43px
     a {
       text-decoration: none;
       display: block;
-      transition: background-color 0.3s;
+      transition: background-color 0.15s;
 
       &:hover {
         background-color: $hover-color;
@@ -549,7 +548,7 @@ $content-height: calc(100vh - 43px); // height of .menu sums up to 43px
       flex: auto 1;
 
       .th.header {
-        transition: background-color 0.3s;
+        transition: background-color 0.15s;
         position: relative;
 
         overflow-y: auto;
@@ -576,8 +575,8 @@ $content-height: calc(100vh - 43px); // height of .menu sums up to 43px
         }
 
         .header-sort-container {
-          height: calc(100% - 2 * 10px);
-          padding: 10px;
+          height: calc(100% - 2 * 5px);
+          padding: 5px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -627,6 +626,8 @@ $content-height: calc(100vh - 43px); // height of .menu sums up to 43px
         .td {
           padding: 1px;
           text-align: right;
+          overflow: hidden;
+          white-space: nowrap;
 
           > * {
             padding: 5px 3px;
@@ -657,6 +658,7 @@ $content-height: calc(100vh - 43px); // height of .menu sums up to 43px
       align-items: center;
       flex-wrap: wrap;
       box-shadow: inset 0px 0px 0px 2px rgba(0, 0, 0, 0.1);
+      padding: 3px;
 
       .pagination-container {
         display: flex;
@@ -668,7 +670,7 @@ $content-height: calc(100vh - 43px); // height of .menu sums up to 43px
           flex: 1 1;
 
           .pagination-element {
-            padding: 10px;
+            padding: 6px;
             width: 40%;
             height: 100%;
           }
@@ -680,7 +682,7 @@ $content-height: calc(100vh - 43px); // height of .menu sums up to 43px
           justify-content: center;
           flex-direction: row;
           flex-wrap: wrap;
-          padding: 10px;
+          margin: 3px;
 
           input,
           select {
