@@ -547,6 +547,15 @@ $content-height: calc(100vh - 43px); // height of .menu sums up to 43px
       overflow-y: scroll;
       flex: auto 1;
 
+      .table-header {
+        .tr:first-of-type {
+          .th:hover {
+            background-color: #fff;
+            cursor: auto;
+          }
+        }
+      }
+
       .th.header {
         transition: background-color 0.15s;
         position: relative;
