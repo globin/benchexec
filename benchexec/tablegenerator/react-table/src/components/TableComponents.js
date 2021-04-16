@@ -65,27 +65,27 @@ export const StandardCell = ({
   );
 };
 
-const SeparatorColumn = Object.freeze({
-  headerClassName: "separator",
-  columns: Object.freeze([
-    Object.freeze({
-      resizable: false,
-      sortable: false,
-      filterable: false,
-      accessor: undefined,
-      width: 2,
-      headerClassName: "separator",
-      className: "separator",
-    }),
-  ]),
-});
+const createSeparatorColumn = (runSetIdx) =>
+  Object.freeze({
+    Header: "",
+    accessor: "separator" + runSetIdx,
+    className: "separator",
+    columns: [
+      {
+        accessor: "separator" + runSetIdx,
+        className: "separator",
+        width: "2",
+      },
+    ],
+  });
 
 export const createRunSetColumns = (runSet, runSetIdx, createColumn) => [
-  SeparatorColumn,
+  createSeparatorColumn(runSetIdx),
   {
     Header: <RunSetHeader runSet={runSet} />,
     columns: runSet.columns.map((column, columnIdx) =>
       createColumn(runSetIdx, column, columnIdx),
     ),
+    id: "runset-column",
   },
 ];
