@@ -384,6 +384,7 @@ $content-height: calc(100vh - 43px); // height of .menu sums up to 43px
   #statistics {
     #statistic-table.table {
       height: auto;
+      white-space: nowrap;
 
       .table-content {
         overflow: hidden;
@@ -471,6 +472,7 @@ $content-height: calc(100vh - 43px); // height of .menu sums up to 43px
     display: flex;
     flex-direction: column;
     height: $content-height;
+    white-space: nowrap;
 
     .resizer {
       display: inline-block;
@@ -636,7 +638,6 @@ $content-height: calc(100vh - 43px); // height of .menu sums up to 43px
           padding: 1px;
           text-align: right;
           overflow: hidden;
-          white-space: nowrap;
 
           > * {
             padding: 5px 3px;
